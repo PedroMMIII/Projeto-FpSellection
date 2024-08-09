@@ -4,6 +4,7 @@
     padding: 0px;
     box-sizing: border-box;
     list-style: none;
+    font-family: "Poppins", sans-serif;
 }
 
 body 
@@ -90,6 +91,7 @@ section
 {
     position: absolute;
     right: 100px;
+    top: -15px;
     width: 70%;
     height: 100%;
     display: flex;
@@ -106,8 +108,9 @@ section
 
 .content h2 
 {
-    font-size: 5em;
+    font-size: 6em;
     line-height: 1em;
+    font-family: "League Gothic", sans-serif;
 }
 
 .description 
@@ -128,6 +131,8 @@ section
     background-color: #beff1b;
     color: #000;
     cursor: pointer;
+    font-family: "League Gothic", sans-serif;
+    
 }
 
 .arrows 
@@ -185,6 +190,7 @@ section
 .number 
 {
     font-size: 5em;
+    font-family: "League Gothic", sans-serif;
 }
 
 .indicators ul 
@@ -205,4 +211,78 @@ section
 .indicators li.active
 {
     background-color: #fff;
+}
+
+section 
+{
+    & .list 
+    {
+        & .item 
+        {
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+        }
+    
+        & .car-img 
+        {
+            & img 
+            {
+                transform: rotate(0);
+                transition: 0.5s;
+                transition-delay: 0.3s;
+            }
+        }
+    
+        & .content 
+        {
+            & .car-information, h2, .description, .btn-contact 
+            {
+                transform: translateX(200px);
+                transition: 0.7s;
+                transition-delay: 0.3s;
+            }
+    
+            & h2 
+            {
+                transition-delay: 0.5s;
+            }
+    
+            & .description 
+            {
+                transition-delay: 0.7s;
+            }
+    
+            & .btn-contact 
+            {
+                transition-delay: 0.9s;
+            }
+        }
+
+        & .active 
+        {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+            z-index: 1;
+
+            & .car-img 
+            {
+                & img 
+                {
+                    transform: rotate(-20deg);
+                }
+            }
+
+            & .content 
+            {
+                & .car-information, h2, .description, .btn-contact 
+                {
+                    transform: translateX(0);
+                }
+            }
+
+        }
+    }
+
 }
