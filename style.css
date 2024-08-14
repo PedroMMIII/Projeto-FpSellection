@@ -76,6 +76,7 @@ section
 {
     position: absolute;
     top: 50%;
+    left: 58px;
     transform: translateY(-50%);
     width: 70%;
     z-index: 1;
@@ -91,7 +92,7 @@ section
 {
     position: absolute;
     right: 100px;
-    top: -15px;
+    top: -20px;
     width: 70%;
     height: 100%;
     display: flex;
@@ -104,13 +105,15 @@ section
 .car-information 
 {
     font-weight: bold;
+    z-index: 0;
 }
 
 .content h2 
 {
-    font-size: 6em;
+    font-size: 7em;
     line-height: 1em;
     font-family: "League Gothic", sans-serif;
+    z-index: 2;
 }
 
 .description 
@@ -241,6 +244,7 @@ section
                 transform: translateX(200px);
                 transition: 0.7s;
                 transition-delay: 0.3s;
+                opacity: 0;
             }
     
             & h2 
@@ -279,6 +283,7 @@ section
                 & .car-information, h2, .description, .btn-contact 
                 {
                     transform: translateX(0);
+                    opacity: 1;
                 }
             }
 
